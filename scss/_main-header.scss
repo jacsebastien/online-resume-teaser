@@ -1,0 +1,134 @@
+@import 'variables';
+@import 'helpers';
+
+.main-header {
+    @extend %box-shadow-3;
+    @extend %basic-transition;
+
+    z-index: 888;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    width: 270px;
+    flex-direction: column;
+
+    display: flex;
+    @include transform(-100%);
+
+    background: $color-revert;
+
+    &.open {
+        @include transform(0);
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .main-menu {
+        text-align: right;
+        padding: 0 18px;
+
+        li {
+            padding: 10px;
+            border-bottom: 1px solid rgba(0, 0, 0, .1);
+            font-weight: 500;
+
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+
+        a:hover:not(.active) {
+            color: $color-secondary;
+        }
+
+        .active {
+            color: $color-revert;
+            position: relative;
+
+            span {
+                position: relative;
+                z-index: 1;
+            }
+
+            &::before {
+                content: ' ';
+                position: absolute;
+                top: -8px;
+                bottom: -8px;
+                left: -15px;
+                right: -15px;
+
+                border-radius: 20px;
+                background: $color-secondary;
+            }
+        }
+    }
+
+    .contact {
+        padding: 18px;
+
+        h3 {
+            margin-bottom: 12px;
+        }
+        
+        li {
+            padding: 4px 0;
+        }
+
+        i {
+            color: $color-secondary;
+            width: 36px;
+            text-align: center;
+        }
+    }
+
+    .social-media {
+        margin-top: auto;
+        margin-bottom: 20px;
+
+        h3 {
+            font-size: 11px;
+            font-weight: 800;
+            text-align: center;
+        }
+
+        ul {
+            display: flex;
+            width: 60%;
+            margin: auto;
+            justify-content: space-around;
+        }
+
+        li {
+            display: inline-block;
+        }
+
+        a {
+            color: $color-primary-variant;
+
+            &:hover {
+                color: $color-secondary;
+            }
+        }
+    }
+
+    .menu-list {
+        @extend %unformatted-list;
+    }
+}
+
+@media screen and (min-width: 990px) {
+    .main-header {
+        top: 25px;
+        left: 25px;
+        bottom: 25px;
+
+        @include transform(0);
+    }
+}

@@ -1,0 +1,124 @@
+@import 'animations';
+
+.home-view {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    background: $color-primary;
+
+    .background-image {
+        @extend %cover-image;
+        background-image: url('/assets/img/home-bg-revert.jpg');
+    }
+
+    .content {
+        position: relative;
+        margin: auto auto 0;
+        width: 100%;
+
+        padding: 120px 0 0;
+        color: $color-revert;
+    }
+
+    h1,
+    h2 {
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 52px;
+
+        span {
+            font-weight: 800;
+        }
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    ul {
+        @extend %unformatted-list;
+        margin-top: 60px;
+    }
+
+    li, a, button {
+        padding: 19px 0 20px;
+    }
+    
+    li {
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+
+    .coming-soon {
+        @extend %box-shadow-2;
+
+        font-size: 20px;
+        font-style: italic;
+        background: $color-secondary;
+        display: inline-block;
+        padding: 10px 28px;
+        border-radius: 40px;
+        margin-top: 60px
+    }
+    
+    a, button {
+        @extend %box-shadow-2;
+        @extend %basic-transition;
+        
+        padding-left: 24px;
+        padding-right: 24px;
+        border-radius: 40px;
+        background: $color-secondary;
+        cursor: pointer;
+
+        color: $color-revert;
+        font-size: 14px;
+
+        i {
+            margin-left: 10px;
+        }
+
+        &:hover {
+            @extend %box-shadow-4;
+            background: $color-revert;
+            color: $color-secondary;
+        }
+    }
+
+    button {
+        border: 0;
+        padding-top: 21px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+@media screen and (min-width: 990px) {
+    .home-view {
+        .background-image {
+            animation-name: zooming;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            -webkit-animation-duration: 14s;
+            animation-duration: 14s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+        .content {
+            width: 90%;
+            padding-bottom: 40px;
+        }
+
+        li {
+            margin-right: 40px;
+        }
+    }
+}

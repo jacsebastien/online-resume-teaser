@@ -1,0 +1,16 @@
+@mixin box-shadow($props1, $props2) {
+    -webkit-box-shadow: $props1, $props2;
+    -ms-box-shadow: $props1, $props2;
+    box-shadow: $props1, $props2;
+}
+
+@mixin transition($element, $time, $type) {
+    transition: $element $time $type;
+    -webkit-transition: $element $time $type;
+    -moz-transition: $element $time $type;
+}
+
+@mixin transform($value) {
+    transform: translateX($value);
+    -webkit-transform: translateX($value);
+}

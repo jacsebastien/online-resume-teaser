@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sebastien Jacques online resume</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon32.png">
+    <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+<body>
+    <header id="mainHeader" class="main-header">
+        <img alt="Profile photo" width="270" height="270" src="/assets/img/profile.jpg" />
+        <nav class="main-menu">
+            <ul class="menu-list">
+                <li>
+                    <a href="#" class="active"><span>Home</span></a>
+                </li>
+                <li>
+                    <a href="#"><span>Resume</span></a>
+                </li>
+                <li>
+                    <a href="#"><span>Works</span></a>
+                </li>
+            </ul>
+        </nav>
+        <div class="contact">
+            <h3>Contact me</h3>
+            <ul class="menu-list">
+                <li><i class="fa fa-globe-europe"></i>Gerpinnes, Belgium</li>
+                <li><i class="far fa-envelope"></i>jac.sebastien@gmail.com</li>
+                <li><i class="fa fa-mobile-alt"></i>0493 17 24 69</li>
+            </ul>
+        </div>
+        <nav class="social-media">
+            <h3>Follow me!</h3>
+            <ul class="menu-list">
+                <li>
+                    <a href="https://www.linkedin.com/in/jacquessebastien" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/jacsebastien" target="_blank">
+                        <i class="fab fa-github-square"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.behance.net/sebastienjacques" target="_blank">
+                        <i class="fab fa-behance-square"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <button class="open-menu" onclick="onOpenMainHeader()"><i class="fas fa-bars"></i></button>
+    <div class="main-content">
+        <section class="home-view">
+            <div class="background-image"></div>
+            <div class="content">
+                <h1 class="home-title">Hi! I’m <span>Sébastien Jacques</span></h1>
+                <h2 class="home-subtitle">Front-end developer &amp; 3D artist</h2>
+
+                <p class="coming-soon">Coming soon ...</p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function onOpenMainHeader() {
+            const classList = document.querySelector('#mainHeader').classList;
+            if (!classList.contains('open')) {
+                classList.add('open');
+            } else {
+                classList.remove('open');
+            }
+        }
+    </script>
+</body>
+
+</html>
