@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300;400;500&display=swap');
+
 @import 'vendor/normalize/normalize';
 @import "vendor/fontawesome/fontawesome.scss";
 @import "vendor/fontawesome/regular.scss";
@@ -35,32 +37,18 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: 'Roboto Condensed', Roboto, Helvetica, Arial, sans-serif;
-    font-weight: 300;
+    font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
 }
 
-header h2 {
-    position: relative;
-    display: inline-block;
-    font-size: 20px;
-    font-weight: 500;
-    text-transform: capitalize;
-
-    &::before {
-        content: '';
-        background: $color-secondary;
-        position: absolute;
-        height: 7px;
-        width: 100%;
-        bottom: 0;
-        left: 0;
-        opacity: 0.4;
-    }
+h1,
+h2,
+h4 {
+    font-weight: 300;
 }
 
 h3 {
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 400;
     text-transform: capitalize;
 }
 
@@ -81,7 +69,7 @@ button.open-menu {
 
     @extend %box-shadow-2;
     @extend %basic-transition;
-    
+
     padding: 20px 22px;
     border: 0;
     border-radius: 40px;
